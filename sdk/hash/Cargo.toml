@@ -19,6 +19,7 @@ borsh = { workspace = true, optional = true }
 bs58 = { workspace = true, default-features = false }
 bytemuck = { workspace = true, optional = true }
 bytemuck_derive = { workspace = true, optional = true }
+js-sys = { workspace = true, optional = true }
 serde = { workspace = true, optional = true }
 serde_derive = { workspace = true, optional = true }
 solana-atomic-u64 = { workspace = true }
@@ -29,13 +30,10 @@ solana-frozen-abi-macro = { workspace = true, optional = true, features = [
     "frozen-abi",
 ] }
 solana-sanitize = { workspace = true }
+wasm-bindgen = { workspace = true, optional = true }
 
 [dev-dependencies]
 solana-hash = { path = ".", features = ["dev-context-only-utils"] }
-
-[target.'cfg(target_arch = "wasm32")'.dependencies]
-js-sys = { workspace = true }
-wasm-bindgen = { workspace = true }
 
 [features]
 borsh = ["dep:borsh", "std"]
@@ -47,6 +45,7 @@ frozen-abi = [
     "dep:solana-frozen-abi-macro",
     "std"
 ]
+js = ["dep:wasm-bindgen", "dep:js-sys"]
 serde = ["dep:serde", "dep:serde_derive"]
 std = []
 
