@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This is a fork of the original `agave` repository that adds support for the [Internet Computer](https://internetcomputer.org) (ICP). The original repository can be found [here](https://github.com/anza-xyz/agave).
+
 <p align="center">
   <a href="https://solana.com">
     <img alt="Solana" src="https://i.imgur.com/0vfIMHo.png" width="250" />
