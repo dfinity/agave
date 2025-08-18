@@ -76,7 +76,7 @@ solana-rent = "=3.0.0"
 solana-rpc-client = { workspace = true, features = ["default"] }
 solana-rpc-client-api = { workspace = true }
 solana-rpc-client-nonce-utils = { workspace = true, features = ["clap"] }
-solana-sbpf = { workspace = true }
+solana-sbpf = { workspace = true, features = ["jit"] }
 solana-sdk-ids = "=3.0.0"
 solana-signature = { version = "=3.0.0", default-features = false }
 solana-signer = "=3.0.0"
